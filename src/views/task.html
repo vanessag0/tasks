@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%- include ('partials/head.html')%>
+
+        <title>Vanessa | <%= task%>
+        </title>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <%- include ('partials/navigation.html')%>
+
+    <!-- Content -->
+    <div class="container">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12 col-md-6 animate__animated animate__fadeIn">
+                    <p class="font-monospace float-end">
+                        12/10/21
+                    </p>
+                    <p class="display-6 pt-5">Nombre actividad</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint modi rerum veritatis quia
+                        animi molestias maxime beatae laborum vero similique totam neque vitae blanditiis aliquid,
+                        earum assumenda dignissimos reiciendis, id perspiciatis? Cupiditate ad alias corporis maxime
+                        error. Eligendi, fuga. Qui?</p>
+                </div>
+                <div class="col-12 col-md-6 animate__animated animate__fadeInRight">
+                    <img src="https://www.ivasfot.com/wp-content/uploads/2010/07/Imagen-4-5.png" class="img-fluid shadow">
+                </div>
+                <button type="button" class="btn btn-success mt-5">Descargar</button>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row">
+
+                <div class="col-12 col-md-6 animate__animated animate__fadeInUp">
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Correo</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Comentarios</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+
+                    <div class="card p-3 m-3 animate__animated animate__fadeInRight">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="user d-flex flex-row align-items-center"> 
+                                <span>
+                                    <small class="font-weight-bold text-primary">
+                                        james_olesenn
+                                    </small>
+                                    <small class="font-weight-bold">Hmm, This poster looks cool</small>
+                                </span> 
+                            </div>
+                        </div>
+                        <div class="action d-flex justify-content-between mt-2 align-items-center">
+                            <small class="font-weight-bold text-secondary">vanessa@frida.com</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    
+    </div>
+
+    <!-- Footer -->
+    <%- include ('partials/footer.html')%>
+
+    <!-- Scripts -->
+    <%- include ('partials/scripts.html')%>
+
+</body>
+
+</html>

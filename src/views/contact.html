@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%- include ('partials/head.html')%>
+
+        <title>Vanessa | <%= contact%>
+        </title>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <%- include ('partials/navigation.html')%>
+
+    <!-- Content -->
+    <div class="container mt-2 pt-2 pb-5 mb-5">
+        <h1 class="display-4 m-4">
+            <%= contact%>
+        </h1>
+        <p>Cuéntame que te pareció el sitio web, también puedo contactarte más tarde.</p>
+
+        <form class="row g-3 mt-4 animate__animated animate__fadeIn">
+
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="inputEmail4" placeholder="Vanesa">
+            </div>
+
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="inputEmail4" placeholder="González">
+            </div>
+
+            <div class="col-md-12">
+                <label for="inputEmail4" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="vanesa@gonzalez.com">
+            </div>
+
+            <div class="col-md-12">
+                <label for="inputAddress" class="form-label">Institución</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="Tecnológico de Estudios Superiores de Coacalco">
+            </div>
+
+            <div class="col-12">
+                <label for="exampleFormControlTextarea1" class="form-label">Comentarios</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <!-- Footer -->
+    <%- include ('partials/footer.html')%>
+
+    <!-- Scripts -->
+    <%- include ('partials/scripts.html')%>
+
+</body>
+
+</html>

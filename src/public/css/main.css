@@ -1,0 +1,13 @@
+.nav-link {
+    color: #6D6875 !important;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.nav-link:hover {
+    color: #E5989B !important;
+}
+
+.vanessa {
+    color: #E5989B !important;
+}
