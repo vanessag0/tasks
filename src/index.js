@@ -1,15 +1,18 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const { ppid } = require('process');
+const morgan = require('morgan');
+// const { ppid } = require('process');
 
 // port
-app.set('port', 4000);
+app.set('port', process.env.PORT || 4000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 
 // middlewares
+app.use(morgan('dev'));
+app.use(express.urlencoded({extended: false}));
 
 // routes
 app.use(require('./routes/index'));

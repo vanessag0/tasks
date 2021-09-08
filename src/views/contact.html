@@ -6,50 +6,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <%- include ('partials/head.html')%>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-        <title>Vanessa | <%= contact%>
-        </title>
+    <!-- Font Awesome - Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- Google Fonts : Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/v.ico" type="image/x-icon">
+
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>Vanessa | Contacto
+    </title>
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <%- include ('partials/navigation.html')%>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./img/vanessa.png" width="120" alt="Frida Vanessa">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html"> <i class="fas fa-home"></i>
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tasks.html"> <i class="fas fa-tasks"></i>
+                            Tareas
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"> <i class="fas fa-comment"></i>
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Content -->
     <div class="container mt-2 pt-2 pb-5 mb-5">
         <h1 class="display-4 m-4">
-            <%= contact%>
+            Contacto
         </h1>
         <p>Cuéntame que te pareció el sitio web, también puedo contactarte más tarde.</p>
 
-        <form class="row g-3 mt-4 animate__animated animate__fadeIn">
+        <form action="https://formspree.io/f/mqkwwnyl" method="POST"
+            class="row g-3 mt-4 animate__animated animate__fadeIn">
 
             <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="inputEmail4" placeholder="Vanesa">
+                <label class="form-label">Nombre</label>
+                <input type="text" name="name" class="form-control" placeholder="Vanesa">
             </div>
 
             <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="inputEmail4" placeholder="González">
+                <label class="form-label">Apellido</label>
+                <input type="text" name="lastname" class="form-control" placeholder="González">
             </div>
 
             <div class="col-md-12">
-                <label for="inputEmail4" class="form-label">Correo</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="vanesa@gonzalez.com">
+                <label class="form-label">Correo</label>
+                <input type="email" name="email" class="form-control" placeholder="vanesa@gonzalez.com">
             </div>
 
             <div class="col-md-12">
-                <label for="inputAddress" class="form-label">Institución</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="Tecnológico de Estudios Superiores de Coacalco">
+                <label class="form-label">Institución</label>
+                <input type="text" name="institucion" class="form-control" 
+                    placeholder="Tecnológico de Estudios Superiores de Coacalco">
             </div>
 
             <div class="col-12">
-                <label for="exampleFormControlTextarea1" class="form-label">Comentarios</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
+                <label class="form-label">Comentarios</label>
+                <textarea name="comment" class="form-control" rows="3"></textarea>
+            </div>
 
             <div class="col-12">
                 <button type="submit" class="btn btn-primary">Enviar</button>
@@ -60,10 +112,41 @@
     </div>
 
     <!-- Footer -->
-    <%- include ('partials/footer.html')%>
+    <div class="container pt-5">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-muted">&copy; 2021 <a class="text-danger text-decoration-none"
+                    href="https://github.com/vanessag0" target="_blank"> Vanessa </a></p>
+
+            <a href="/"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <img src="./img/vanessa.png" width="80" alt="Frida Vanessa">
+            </a>
+
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link px-2 text-muted">
+                        Inicio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="tasks.html" class="nav-link px-2 text-muted">
+                        Tareas
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link px-2 text-muted">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
 
     <!-- Scripts -->
-    <%- include ('partials/scripts.html')%>
+    <!-- Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
 
 </body>
 
