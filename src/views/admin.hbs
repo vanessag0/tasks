@@ -1,0 +1,39 @@
+<!-- Content -->
+<div class="container">
+
+    <h1 class="display-4">
+        Subir actividad
+    </h1>
+
+    <form action="/new-task" method="POST" class="row g-3 mt-4 animate__animated animate__fadeIn">
+
+        <div class="col-12 col-md-6">
+            <label class="form-label">Título</label>
+            <input type="text" name="title" class="form-control" autofocus>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <label class="form-label">Fecha</label>
+            <input type="date" name="date" class="form-control">
+        </div>
+
+        <div class="col-12">
+            <label class="form-label">Descripción</label>
+            <textarea name="description" class="form-control" rows="3"></textarea>
+        </div>
+
+        {{!-- <div class="col-12 col-md-6">
+            <label class="form-label">Imagen</label>
+            <input type="file" name="image" class="form-control">
+        </div>
+
+        <div class="col-12 col-md-6">
+            <label class="form-label">Archivo</label>
+            <input type="file" name="file" class="form-control">
+        </div> --}}
+
+        <button type="submit" class="btn btn-primary">Subir</button>
+
+    </form>
+
+</div>
